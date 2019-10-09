@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+import os
+
 from get_comments import process_subreddit
 
 app = Flask(__name__)
@@ -22,4 +24,4 @@ def index():
         return jsonify({"message": "ERROR...WRONG KEY"}), 401
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')

@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 COPY . /app
 WORKDIR /app
 
-CMD ["gunicorn", "-w 4", "main:app"]
+CMD ["gunicorn", "-w 4", "app:app"]
