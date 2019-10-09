@@ -15,7 +15,8 @@ def index():
 
     if api_key == API_KEY:
         subreddit = request.args.get('subreddit')
-        subreddit_comments = process_subreddit(subreddit)
+        comment_count = request.args.get('count', default=10)
+        subreddit_comments = process_subreddit(subreddit, count)
         return jsonify({
                    "comments": subreddit_comments,
                    "subreddit": subreddit

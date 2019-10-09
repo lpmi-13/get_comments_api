@@ -15,13 +15,13 @@ reddit = praw.Reddit(client_id=reddit_client_id,
                      user_agent=reddit_user_agent,
                      username=reddit_username)
 
-def process_subreddit(subreddit):
+def process_subreddit(subreddit, count):
 
     subreddit = reddit.subreddit(subreddit)
 
     subreddit_comments = []
 
-    for submission in subreddit.new(limit=100):
+    for submission in subreddit.new(limit=count):
 
         for comment in submission.comments:
 
