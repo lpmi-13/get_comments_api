@@ -1,0 +1,10 @@
+README.md
+bin
+lib
+include
+__pycache__
+*.json
+Dockerfile
+.git
+.gitignore
+.dockerignore
